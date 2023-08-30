@@ -975,6 +975,7 @@ generateTimetableButton.addEventListener('click', () => {
                 });
         })
         .flat();
+        window.scrollTo(0, document.body.scrollHeight);
 
     const sortedEntries = sortByDate(selectedEntries);
 
