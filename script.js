@@ -955,7 +955,7 @@ function sortByDate(data) {
 // Generate timetable based on selected subjects and teachers
 generateTimetableButton.addEventListener('click', () => {
     const selectedSubjectContainers = Array.from(document.querySelectorAll('.subject-container'));
-
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
     const selectedEntries = selectedSubjectContainers
         .filter(container => container.querySelector('input[name="class"]').checked)
         .map(container => {
@@ -975,7 +975,6 @@ generateTimetableButton.addEventListener('click', () => {
                 });
         })
         .flat();
-        window.scrollTo(0, document.body.scrollHeight);
 
     const sortedEntries = sortByDate(selectedEntries);
 
