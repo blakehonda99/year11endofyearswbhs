@@ -1015,3 +1015,11 @@ generateTimetableButton.addEventListener('click', () => {
 
 // Get the button:
 let mybutton = document.getElementById("myBtn");
+
+ window.onscroll = function () {
+            if (document.body.scrollHeight - (window.innerHeight + window.scrollY) > 20 || document.documentElement.scrollHeight - (window.innerHeight + window.scrollY) > 20) {
+                scrollToBottomButton.style.display = "block";
+            } else {
+                scrollToBottomButton.style.display = "none";
+            }
+ };
