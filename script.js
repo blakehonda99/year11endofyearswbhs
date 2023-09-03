@@ -1027,5 +1027,9 @@ function scrollFunction() {
 // When the user clicks on the button, scroll to the bottom of the document
 function bottomFunction() {
   document.body.scrollTop = document.body.scrollHeight; // For Safari
-  document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE and Opera
+  document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE, and Opera
 }
+
+// Attach the bottomFunction to a button click event
+mybutton.addEventListener("click", bottomFunction);
+
