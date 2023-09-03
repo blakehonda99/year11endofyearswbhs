@@ -955,6 +955,9 @@ function sortByDate(data) {
 // Generate timetable based on selected subjects and teachers
 generateTimetableButton.addEventListener('click', () => {
     const selectedSubjectContainers = Array.from(document.querySelectorAll('.subject-container'));
+    document.body.scrollTop = document.body.scrollHeight; // For Safari
+    document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE, and Opera
+    
   
     const selectedEntries = selectedSubjectContainers
         .filter(container => container.querySelector('input[name="class"]').checked)
@@ -1012,24 +1015,3 @@ generateTimetableButton.addEventListener('click', () => {
 
 // Get the button:
 let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollHeight - (window.innerHeight + window.scrollY) > 20 || document.documentElement.scrollHeight - (window.innerHeight + window.scrollY) > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the bottom of the document
-function bottomFunction() {
-  document.body.scrollTop = document.body.scrollHeight; // For Safari
-  document.documentElement.scrollTop = document.documentElement.scrollHeight; // For Chrome, Firefox, IE, and Opera
-}
-
-// Attach the bottomFunction to a button click event
-mybutton.addEventListener("click", bottomFunction);
-
