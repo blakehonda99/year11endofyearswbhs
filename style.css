@@ -1,29 +1,39 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default browser styles */
+body, h1, h2, p, ul, ol, li, button {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
+/* Apply a modern font and background color */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Center the content */
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
+/* Style the header */
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333333;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #007bff; /* Modern blue color */
 }
 
+/* Update the filter section */
 .filter-section {
-    background-color: #f5f5f5;
+    background-color: #007bff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -31,24 +41,27 @@ h1 {
 }
 
 button {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 12px 24px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
+    color: #fff;
 }
 
+/* Style the timetable section */
 #timetable {
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     overflow-x: auto;
 }
@@ -60,13 +73,14 @@ button:hover {
 
 .timetable-table th,
 .timetable-table td {
-    padding: 12px;
+    padding: 16px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #ddd;
 }
 
 .timetable-table th {
-    background-color: #f5f5f5;
+    background-color: #007bff;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -77,12 +91,26 @@ button:hover {
 
 .timetable-entry p {
     margin: 0;
-    padding: 5px;
+    padding: 10px;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+
     .timetable-table th,
     .timetable-table td {
-        padding: 8px;
+        padding: 12px;
     }
 }
