@@ -11,21 +11,22 @@
         <nav class="navbar">
             <div class="container">
                 <h1>Exam Timetable</h1>
-                <button id="generateTimetable" onclick="topFunction()">Generate Timetable</button>
             </div>
         </nav>
     </header>
     
-    <section class="filter-section">
-        <div class="container">
-            <div id="classCheckboxes"></div>
-        </div>
-    </section>
-    
     <main class="main-content">
+        <section class="filter-section">
+            <div class="container">
+                <div id="classCheckboxes"></div>
+            </div>
+        </section>
+        
         <div class="container">
             <div id="timetable"></div>
         </div>
+
+        <button id="generateTimetable" onclick="topFunction()">Generate Timetable</button>
     </main>
 
     <script src="script.js"></script>
